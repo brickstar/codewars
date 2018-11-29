@@ -11,6 +11,11 @@ class PopShiftTest < Minitest::Test
   end
 
   def test_it_pops_and_shifts
+    actual = "exampletesthere"
+    expected = ["erehtse","example","t"]
+
+    assert_equal @ps.popshift(actual), expected
+
     actual = "reusetestcasesbitcointakeovertheworldmaybewhoknowsperhaps"
     expected = ["spahrepswonkohwebyamdlroweht","reusetestcasesbitcointakeove", "r"]
 
@@ -18,12 +23,6 @@ class PopShiftTest < Minitest::Test
 
     actual = "turnsoutrandomtestcasesareeasierthanwritingoutbasicones"
     expected =  ["senocisabtuognitirwnahtreis","turnsoutrandomtestcasesaree", "a"]
-
-    assert_equal @ps.popshift(actual), expected
-
-
-    actual = "exampletesthere"
-    expected = ["erehtse","example","t"]
 
     assert_equal @ps.popshift(actual), expected
 
@@ -39,6 +38,11 @@ class PopShiftTest < Minitest::Test
 
     actual = "letsallgoonholidaysomewhereverycold"
     expected = ["dlocyreverehwemos","letsallgoonholida","y"]
+
+    assert_equal @ps.popshift(actual), expected
+
+    actual = "a"
+    expected = ["a", "", ""]
 
     assert_equal @ps.popshift(actual), expected
   end
