@@ -1,10 +1,8 @@
 require 'pry'
 class SumOfTwoLowest
   def sum_two_smallest_numbers(ary)
-    first = ary.min_by { |num| num }
-    ary.delete(first)
-    second = ary.min_by { |num| num }
-    first + second
+    binding.pry
+    ary.sort[0..1].inject(:+)
   end
 end
 
