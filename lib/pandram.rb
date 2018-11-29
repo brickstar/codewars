@@ -1,2 +1,0 @@
-class Pandram
-end
