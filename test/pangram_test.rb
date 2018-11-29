@@ -1,5 +1,5 @@
 require_relative 'test_helper'
-require './lib/pandram'
+require './lib/pangram'
 
 
 class PangramTest < Minitest::Test
@@ -11,10 +11,8 @@ class PangramTest < Minitest::Test
     assert_instance_of Pangram, @pangram
   end
 
-  def test_is_pandram?
-    Test.assert_equals(panagram?("The quick brown fox jumps over the lazy dog."), true)
-
-# "This is not a pangram."
-    Test.assert_equals(panagram?("This is not a pangram."), false)
-
+  def test_is_pangram?
+    assert_equal(@pangram.pangram?("The quick brown fox jumps over the lazy dog."), true)
+    assert_equal(@pangram.pangram?("This is not a pangram."), false)
+  end
 end
