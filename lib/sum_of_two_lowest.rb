@@ -1,7 +1,6 @@
 require 'pry'
 class SumOfTwoLowest
   def sum_two_smallest_numbers(ary)
-    binding.pry
     ary.sort[0..1].inject(:+)
   end
 end
