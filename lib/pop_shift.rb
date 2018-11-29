@@ -1,4 +1,3 @@
-require 'pry'
 class PopShift
   def popshift(string)
     return [string, "", ""] if string.length == 1
