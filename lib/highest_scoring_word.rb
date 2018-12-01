@@ -1,15 +1,15 @@
 require 'pry'
 
 class HighestScoringWord
-  def high(x)
-    thing = splitter(x)
-    scores = score_words(thing)
-    get_index = scores.index(scores.max_by { |num| num })
-    thing[get_index]
+  def high(sentence)
+    split_sentence = split_sentence(sentence)
+    scores = score_words(split_sentence)
+    get_index_of_highest_score = scores.index(scores.max_by { |num| num })
+    split_sentence[get_index_of_highest_score]
   end
 
   private
-    def splitter(x)
+    def split_sentence(x)
       x.split
     end
 
